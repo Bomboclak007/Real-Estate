@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url(./assets/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

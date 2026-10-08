@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    width: 100%;    
+    height: auto;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        background-color: #020100;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    .headerMusorLine{
+        width: 100%;
+        height: auto;
+        min-height: 70px;
+        background: #141414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        border-bottom: 1px solid #333333;
+        .SubscribeLine{
+            color: #98989A;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+    .headerBlockTop{
+        width: 70%;
+        background-color: #020100;
+
+
+        .headerJC{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            .logoPhoto{
+                width: 138px;
+                height: 29px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                img:first-child{
+                    width: 29px;
+                    height: 29px;
+                }
+                p:last-child{
+                    color: #FFFFFF;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+            .nav{
+                width: 50%;
+                display: flex;
+                justify-content: space-between; 
+                align-items: center;
+                
+
+               
+                a{
+                    text-decoration: none;
+
+                    font-family: "Roboto Mono", monospace;
+                        
+                    color: #98989A;
+                    width: 13vh;
+                    height: 6vh;
+                    border: none;
+                    border-radius: 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   
+                }
+                .active{
+                    width: 13vh;
+                    height: 55px;
+                    outline: none;
+                    cursor: pointer;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 12px;
+                    border-color: #ff0000;
+                    border-width: 500px;
+                    color: #FFFFFF;
+                    font-family: sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: background 0.2s ease;
+                    }
+                a:hover{    
+                    color: #ffffff;
+                }
+       
+            }
+            .ConectUs{
+                width: 140px;
+                height: 55px;
+                border-radius: 10px;
+                background: rgb(255 255 255 / 0.1);
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+                transition: background-color 0.2s ease;
+                outline: none;
+                border: none;
+                font-weight: 700;
+                color: #ffffff;
+            }
+        }
+        
+    }
+    
+}

@@ -1,0 +1,230 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../../assets/samolet-1.png);
+
+}
+.HeroSection{
+    background-image: url('../../assets/Herosection.png');
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #020100;
+    width: 99.2vw;
+    height: 934px;
+    padding-left: 40px; 
+
+    .Left{
+        gap: 40px;
+        width: 820px;
+        height: 542px;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start; 
+        text-align: left;
+    
+        .top{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 642px;
+            height: 240px;
+            p{
+                color: #F0F0F0;
+                font-size: 73px;
+                text-align: left;
+            }
+        }
+        .botom{
+            width: 633px;
+            height: 27.7vh;
+            gap: 20px;
+            display: flex;
+            align-items: flex-start; 
+            justify-content: start;
+            flex-direction: column;
+            text-align: left;
+            flex-wrap: wrap;
+            p{
+                color: #C0C0BF;
+                font-size: 20px;
+            }
+            .button{
+                width: 400px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                /* Кнопки теперь точно встанут влево внутри своего контейнера */
+                justify-content: flex-start; 
+                gap: 20px;
+                button:first-child{
+
+                    background-color: #FF5200;
+                    color: #F0F0F0;
+                    font-size: 18px;
+                    width: 174px;
+                    height: 59px;
+                    border-radius: 8px;
+                    border: none;
+                }
+                button:last-child{
+                    background-color: #201F1F;
+                    color: #F0F0F0;
+                    font-size: 18px;
+                    width: 174px;
+                    height: 59px;
+                    border-radius: 8px;
+                    border: none;
+                }
+            }
+        }
+    }
+    .Right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .topright{
+            display: flex;
+            justify-content: center;
+            width: 330px;
+            height: 103px;
+            flex-wrap: wrap;
+            background: rgb(255 255 255 / 22%); 
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px); 
+            border-radius: 20px;
+            position: relative;
+            bottom: 300px;
+            .Otsivtop{
+                width: 330px;
+                height: 103px;
+                display: flex;
+                justify-content: center;
+                 flex-wrap: wrap;
+                .leftOtsiv{
+                    display: flex;
+                    justify-content: center;
+                    width: 92px;
+                    height: 102px;
+                    align-items: center;
+                    img{
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+                .rightOtsiv{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        width: 238px;
+                        height: 85px;
+                        color: #F0F0F0;
+                        align-content: flex-end;
+                    img{
+                        width: 105px;
+                        height: 21px;
+                    }
+                }
+            }
+        }
+        .botomright{
+            display: flex;
+            justify-content: center;
+            width: 330px;
+            height: 103px;
+            flex-wrap: wrap;
+            background: rgb(255 255 255 / 22%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px); 
+            border-radius: 20px;
+            position: relative;
+            bottom: -165px;
+            .Otsivbot{
+                width: 330px;
+                height: 103px;
+                display: flex;
+                justify-content: center;
+                 flex-wrap: wrap;
+                .leftOtsiv{
+                    display: flex;
+                    justify-content: center;
+                    width: 92px;
+                    height: 102px;
+                    align-items: center;
+                    img{
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+                .rightOtsiv{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        width: 238px;
+                        height: 85px;
+                        color: #F0F0F0;
+                        align-content: flex-end;
+                    img{
+                        width: 105px;
+                        height: 21px;
+                    }
+                }
+            }
+        }
+    }
+    img{
+        width: 1440px;
+    height: 934px;
+    background-position: center center;
+  background-size: cover;
+    }
+}
+
+.building{
+    background-image: url(/src/assets/Group.png);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #FF5200;
+    width: 99.2vw;
+    height: 934px;
+    padding-left: 36px;
+    align-items: flex-start;
+    .bild{
+        width: 1908px;
+        height: 421px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        .TopGroup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .DivText{        
+                width: 789px;
+                height: 184px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+            }
+        }
+        .BotomGrop{
+
+        }
+    }
+}
