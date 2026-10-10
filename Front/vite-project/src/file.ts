@@ -10,6 +10,7 @@ import Stars2 from './assets/Starts2.png';
 import negr from './assets/negr.png';
 import group from './assets/Group.png';
 import shape from './assets/shape.png';
+import ClientImages from './assets/ClientImages.png';
 // В TS объект можно экспортировать напрямую с автовыведением типов
 export const Photo = {
     Vector:Vector,
@@ -20,4 +21,5 @@ export const Photo = {
     negr:negr,
     group:group,
     shape:shape,
+    ClientImages:ClientImages,
 };

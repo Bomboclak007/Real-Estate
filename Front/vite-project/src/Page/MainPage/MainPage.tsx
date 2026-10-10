@@ -60,11 +60,27 @@ return (
         <div className={classes.bild}>
             <div className={classes.TopGroup}>
                 <div className={classes.DivText}>
-                    <p>We're <img src={Photo.shape} alt="" /> building <span>communities.</span></p>
+                    <p>We're <img src={Photo.shape} alt="" /> building communities.</p>
+                </div>
+                <div className={classes.DivTextLitle}>
+                    <p>With a commitment to excellence and a focus on innovation, we've established ourselves as a leader in the real estate and construction industry.</p>
                 </div>
             </div>
             <div className={classes.BotomGrop}>
-
+                <div className={classes.LearnMoreUp}>
+                    <button>Learn More About Us...</button>
+                </div>
+                <div className={classes.peoplbot}>
+                    <div className={classes.popl}>
+                        <div className={classes.LeftPeopl}>
+                            <img src={Photo.ClientImages} alt="" />
+                        </div>
+                        <div className={classes.RightStar}>
+                            <img src={Photo.Stars2} alt="" />
+                            <p>4.3/5 Rated by 300+ Professionals</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
