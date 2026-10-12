@@ -6,7 +6,7 @@ main{
     flex-direction: column;
     background-image: url(../../assets/samolet-1.png);
 
-}
+
 .HeroSection{
     background-image: url('../../assets/Herosection.png');
     display: flex;
@@ -310,4 +310,67 @@ main{
             }
         }
     }
+}
+    .FeaturedProject{
+        background-color: #020100;
+        width: 99.2vw;
+        height: 1162px;
+        .DivFeatured{
+            width: 99.2vw;
+            height: 946px;
+            .DivUp{
+                flex-wrap: wrap;
+                width: 99.2vw;
+                height: 170px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .UpText{
+                    width: 1814px;
+                    height: 137px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img:first-child{
+                        width: 38px;
+                        height: 38px;
+                    }
+                    p:last-child{
+                        font-size: 59px;
+                        width: 531px;
+                        height: 59px;
+                        color: #F0F0F0;
+                    }
+                }
+                .BotText{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 94.2vw;
+                    height: 87px;
+                    p:first-child{
+                        color: #C0C0BF;
+                        font-size: 18px;
+                        width: 729px;
+                        height: 87px;
+                    }
+                    button:last-child{
+                        background-color: #282726;
+                        width: 156px;
+                        height: 56px;
+                        color: #F0F0F0;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                }
+            }
+            .DivBotom{
+                width: 99.2vw;
+                height: 704px;
+            }   
+        }
+    }
+
+
+
 }

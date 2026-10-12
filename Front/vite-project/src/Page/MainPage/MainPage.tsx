@@ -84,7 +84,23 @@ return (
             </div>
         </div>
     </div>
+    <div className={classes.FeaturedProject}>
+        <div className={classes.DivFeatured}>
+                <div className={classes.DivUp}>
+                    <div className={classes.UpText}>
+                        <img src={Photo.VectorOrange} alt="" />
+                        <p>Featured Projects</p>
+                    </div>
+                    <div className={classes.BotText}>
+                        <p>we've built a reputation for delivering exceptional results and exceeding our clients' expectations. From luxurious residential homes to state-of-the-art commercial properties, our team of experts is dedicated to bringing your vision to life.</p>
+                        <button>View all Projects</button>
+                    </div>
+                </div>
+                <div className={classes.DivBotom}>
 
+                </div>
+        </div>
+    </div>
 </main>
 
 </>
