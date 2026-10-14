@@ -2,14 +2,39 @@ import React from "react";
 import { useState } from "react";
 import classes from './MainPage.module.scss';
 import { NavLink } from 'react-router-dom';
-
 // @ts-ignore — добавьте эту строку, если TypeScript ругается на отсутствие типов для file.js
-
-
-
 import { Photo } from "../../file.ts";
+import { useEffect } from 'react';
+
+interface HouseDomType {
+  id: number;
+  title: string;
+  text: string;
+  adres: string; // Добавьте поля, которые реально приходят из таблицы housdom
+  img: string;
+  param: string;
+}
 
 export default function MainPage(): React.JSX.Element {
+  const [main, setMain] = useState<HouseDomType[] | null>(null);
+  useEffect(() => {
+        const controller = new AbortController();
+     Promise.all([
+      fetch('http://localhost:3000/main', { signal: controller.signal })
+        .then((r) => r.json() as Promise<HouseDomType[]>),
+    ])
+      .then(([mainRows]) => {
+        setMain(mainRows);
+      })
+      .catch((e) => {
+        if ((e as Error).name !== 'AbortError') {
+          console.error("Ошибка при получении данных:", e);
+        }
+      });
+
+  return () => controller.abort();
+}, []);
+
 return (
 <>
 <main>
@@ -97,7 +122,31 @@ return (
                     </div>
                 </div>
                 <div className={classes.DivBotom}>
+                    {main && main.map((project) => (  
+                        <div key={project.id} className={classes.CardHous}>
+                            {/* Контейнер для картинки */}
+                            <div className={classes.ImageHous}>
+                                <img src={project.img} />
+                            </div>
 
+                            {/* Текстовый контент */}
+                            <div className={classes.CardText}>
+                                    <h3>{project.title}</h3>
+                                    <p>{project.text}</p>
+                                    {/* Строка локации */}
+                                <div className={classes.Location}>
+                                    <img src={Photo.location} alt="Location" />
+                                    <span>{project.adres}</span>
+                                </div>
+                                <div className={classes.Param}>
+                                   <button>{project.param}</button>
+                                </div>
+                                <div className={classes.ViewButton}>
+                                    <button className={classes.ViewPropertyBtn}>View Property</button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
         </div>
     </div>

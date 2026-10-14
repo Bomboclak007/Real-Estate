@@ -367,6 +367,82 @@ main{
             .DivBotom{
                 width: 99.2vw;
                 height: 704px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .CardHous{
+                    width: 430px;
+                    height: 640px;
+                    .ImageHous{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 380px;
+                        height: 300px;
+                        img{
+                            width: 380px;
+                            height: 300px;
+                        }
+                    }
+                    .CardText{
+                        width: 380px;
+                        height: 270px;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        align-content: space-around;
+                        justify-content: flex-start;
+
+                        h3{
+                            color: #F0F0F0;
+                            font-size: 24px;
+                        }
+                        p{
+                            color: #C0C0BF;
+                            font-size: 16px;
+                        }
+                    }
+                    .Location{
+                        width: 380px;
+                        height: 22px;
+                        display: flex;
+                        justify-content: flex-start;
+                        img{
+                            width: 12px;
+                            height: 14px;
+                        }
+                        span{
+                            color: #8D8D8C;
+                            font-size: 14px;
+                        }
+                    }
+                    .Param{
+                        width: 380px;
+                        height: 34px;
+                        button{
+                            width: 104px;
+                            height: 34px;
+                            color: #C0C0BF;
+                            border: none;
+                            background-color: #161514;
+                            border-radius: 8px;
+                        }
+                    }
+                    .ViewButton{
+                        width: 380px;
+                        height: 56px;
+                        button{
+                            width: 380px;
+                            height: 56px;
+                            font-size: 16px;
+                            background-color: #FF5200;
+                            color: #F0F0F0;
+                            border: none;
+                            border-radius: 8px;
+                        }
+                    }
+                }
             }   
         }
     }
