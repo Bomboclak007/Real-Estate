@@ -12,7 +12,9 @@ import group from './assets/Group.png';
 import shape from './assets/shape.png';
 import ClientImages from './assets/ClientImages.png';
 import VectorOrange from './assets/VectorOrange.png';
-import location from './assets/Location.png'
+import location from './assets/Location.png';
+import ButtonsLeftright from './assets/ButtonsLeftright.png';
+import StarOrange from './assets/StarOrange.png';
 // В TS объект можно экспортировать напрямую с автовыведением типов
 export const Photo = {
     Vector:Vector,
@@ -26,4 +28,6 @@ export const Photo = {
     ClientImages:ClientImages,
     VectorOrange:VectorOrange,
     location:location,
+    ButtonsLeftright:ButtonsLeftright,
+    StarOrange:StarOrange,
 };

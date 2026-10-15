@@ -321,19 +321,20 @@ main{
             .DivUp{
                 flex-wrap: wrap;
                 width: 99.2vw;
-                height: 170px;
+                height: 276px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 .UpText{
                     width: 1814px;
-                    height: 137px;
+                    height: 97px;
                     display: flex;
                     justify-content: flex-start;
-                    align-items: center;
+                    align-items: flex-end;
                     img:first-child{
                         width: 38px;
                         height: 38px;
+                          margin-right: 15px;
                     }
                     p:last-child{
                         font-size: 59px;
@@ -368,12 +369,31 @@ main{
                 width: 99.2vw;
                 height: 704px;
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
                 flex-wrap: wrap;
                 .CardHous{
-                    width: 430px;
+                    width: 415px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
                     height: 640px;
+                    border-color: #8D8D8C;
+                    border: 1px solid #262626; 
+                    /* Скругление углов карточки */
+                    border-radius: 24px; 
+                    
+                    /* Внутренние отступы, чтобы контент не прилипал к краям */
+                    padding: 16px; 
+                    
+                    /* Цвет фона самой карточки */
+                    background-color: #0d0d0d; 
+                    
+                    /* Гарантирует, что обводка входит в общую ширину карточки */
+                    box-sizing: border-box; 
+                    
+                    /* Прячет контент, если он вылезает за скругленные края */
+                    overflow: hidden; 
                     .ImageHous{
                         display: flex;
                         justify-content: center;
@@ -411,6 +431,7 @@ main{
                         img{
                             width: 12px;
                             height: 14px;
+                            margin-right: 6px;
                         }
                         span{
                             color: #8D8D8C;
@@ -421,10 +442,11 @@ main{
                         width: 380px;
                         height: 34px;
                         button{
-                            width: 104px;
+                            width: 120px;
                             height: 34px;
                             color: #C0C0BF;
                             border: none;
+                            border: 1px solid #262626; 
                             background-color: #161514;
                             border-radius: 8px;
                         }
@@ -442,11 +464,159 @@ main{
                             border-radius: 8px;
                         }
                     }
+
+                        }
+                    }
                 }
+                .BotBot{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 83.2vw;
+                    height: 109px;
+                    align-items: flex-end;
+                        .LeftBot{
+                            width: 44px;
+                            height: 24px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            p{
+                                color: #F0F0F0;
+                                font-size: 16px;
+                            }
+                        }
+                        .RightBot{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 98px;
+                                height: 44px;
+                            }
             }   
         }
     }
+    .QualitiServesMain{
+        width: 99.2vw;
+        height: 1014px;
+        background-color: #020100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+            .QualitiServesMainText{
+                flex-wrap: wrap;
+                width: 1312px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .UpQualiti{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1312px;
+                    height: 59px;
+                    p{
+                        font-size: 59px;
+                        color: #F0F0F0;
+                    }
+                    img{
+                        width: 40px;
+                        height: 38px;
+                    }
+                }
 
+                    .BotQualiti{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 593px;
+                        height: 99px;
+                        p{
+                            color: #C0C0BF;
+                            font-size: 18px;
+                        }
+                    }
+                .BotDivButton{
+                    width: 1312px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .BotButton{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 604px;
+                        height: 69px;
+                        background-color: #161514;
+
+                    }
+                }
+            }
+    
+     .QualitiServes{
+                width: 99.2vw;
+                height: 704px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                .CardHous2{
+                    width: 415px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    height: 640px;
+                    border-color: #8D8D8C;
+                    border: 1px solid #262626; 
+                    /* Скругление углов карточки */
+                    border-radius: 24px; 
+                    
+                    /* Внутренние отступы, чтобы контент не прилипал к краям */
+                    padding: 16px; 
+                    
+                    /* Цвет фона самой карточки */
+                    background-color: #0d0d0d; 
+                    
+                    /* Гарантирует, что обводка входит в общую ширину карточки */
+                    box-sizing: border-box; 
+                    
+                    /* Прячет контент, если он вылезает за скругленные края */
+                    overflow: hidden; 
+                    .ImageHous2{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 380px;
+                        height: 300px;
+                        img{
+                            width: 380px;
+                            height: 300px;
+                        }
+                    }
+                    .CardText{
+                        width: 380px;
+                        height: 270px;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        align-content: space-around;
+                        justify-content: flex-start;
+
+                        h3{
+                            color: #F0F0F0;
+                            font-size: 24px;
+                        }
+                        p{
+                            color: #C0C0BF;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
 
 
 }

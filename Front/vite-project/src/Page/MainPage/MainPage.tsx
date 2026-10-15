@@ -15,8 +15,17 @@ interface HouseDomType {
   param: string;
 }
 
+
+interface Qualitiserves {
+  id: number;
+  title_text: string;
+  text: string;
+  img: string;
+}
+
 export default function MainPage(): React.JSX.Element {
   const [main, setMain] = useState<HouseDomType[] | null>(null);
+  const [main2, setMain2] = useState<Qualitiserves[] | null>(null);
   useEffect(() => {
         const controller = new AbortController();
      Promise.all([
@@ -25,6 +34,15 @@ export default function MainPage(): React.JSX.Element {
     ])
       .then(([mainRows]) => {
         setMain(mainRows);
+      })
+
+
+           Promise.all([
+      fetch('http://localhost:3000/main2', { signal: controller.signal })
+        .then((r) => r.json() as Promise<Qualitiserves[]>),
+    ])
+      .then(([mainRows]) => {
+        setMain2(mainRows);
       })
       .catch((e) => {
         if ((e as Error).name !== 'AbortError') {
@@ -147,8 +165,57 @@ return (
                             </div>
                         </div>
                     ))}
+                    <div className={classes.BotBot}>
+                        <div className={classes.LeftBot}>
+                                <p>01/03</p>
+                        </div>
+                        <div className={classes.RightBot}>
+                            <img src={Photo.ButtonsLeftright} alt="" />
+                        </div>
+                    </div>
                 </div>
         </div>
+    </div>
+    <div className={classes.QualitiServesMain}>
+        <div className={classes.QualitiServesMainText}>
+            <div className={classes.UpQualiti}>
+                    <p>Quality service you get</p>
+                    <img src={Photo.StarOrange} alt="" />
+            </div>
+            <div className={classes.BotQualiti}>
+                    <p>At Pinnacle, we offer a wide range of services to cater to your unique needs. From residential construction to commercial development, we've got you covered.</p>
+            </div>
+            <div className={classes.BotDivButton}>
+                <div className={classes.BotButton}>
+                    <button>Residential</button>
+                    <button>Property Management</button>
+                    <button>Commercial</button>
+                    <button>Development</button>
+                </div>
+            </div>
+        </div>
+
+    <div className={classes.QualitiServes}>
+        {main2 && main2.map((project2) => (
+            <div key={project2.id} className={classes.CardHous2}>
+                            <div className={classes.ImageHous2}>
+                                <img src={project2.img} />
+                            </div>
+
+                            {/* Текстовый контент */}
+                            <div className={classes.CardText}>
+                                <h3>{project2.title_text}</h3>
+                                <p>{project2.text}</p>
+                                    {/* Строка локации */}
+                            <div className={classes.ViewButton}>
+                                  <button className={classes.ViewPropertyBtn}>Learn more...</button>
+                            </div>
+                        </div>
+            </div>
+
+        ))}
+
+    </div>
     </div>
 </main>
 
