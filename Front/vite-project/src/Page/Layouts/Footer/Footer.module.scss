@@ -1,0 +1,266 @@
+.OrangeFut{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    .OrangeBg{
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FF5200;
+        border-radius: 16px;
+        background-image: url(../../../assets/Radius.png);
+        background-position: center;
+        .OrangeContent{
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .OrangeContentTXT{
+                width: 90%;
+                color: #ffffff;
+                font-size: 64px;
+                font-weight: 800;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 3%;
+                text-align: center;
+                
+            }
+            .OrangeContentBTN{
+                background: #161514;
+                border-radius: 16px;
+                padding: 1.5rem;
+                border: none;
+                color: #ffffff;
+                scroll-behavior: smooth;
+                transition: 0.3;
+                text-decoration: none;
+            }
+        }
+    }
+
+    
+}
+
+
+$color-bg: #000000;
+$color-text-main: #ffffff;
+$color-text-muted: #808080;
+$color-input-bg: #000000;
+$color-border: #1a1a1a;
+$color-accent: #f06434; 
+
+.BlackFut {
+    background-color: $color-bg;  
+    height: 40vh;
+    font-family: sans-serif; 
+    color: $color-text-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  .BlackBg {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 80%;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+
+  .leftColumn {
+    flex: 0 1 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .logoPhoto {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .subscribeForm {
+      display: flex;
+      align-items: center;
+      background-color: $color-input-bg;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      padding: 12px 16px;
+      gap: 12px;
+
+      .mailIcon {
+        color: $color-text-muted;
+        font-size: 18px;
+      }
+
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        color: $color-text-main;
+        font-size: 14px;
+        width: 100%;
+
+        &::placeholder {
+          color: $color-text-muted;
+        }
+      }
+
+      .sendBtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .telegramIcon {
+          color: $color-text-main;
+          font-size: 16px;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  // ПРАВАЯ КОЛОНКА
+  .rightColumn {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; // Перенос колонок, если не влезают
+
+    @media (max-width: 576px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // На мелких экранах выстроятся в 2 ряда
+      gap: 30px;
+    }
+
+    .linksGroup {
+      h3 {
+        color: $color-text-muted;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        li {
+          a {
+            color: $color-text-main;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: $color-text-muted; // Эффект при наведении
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Переменные для нижней панели
+$color-bottom-bg: #111111; // Чуть более светлый серый оттенок для фона плашки
+$color-social-bg: #1a1a1a; // Цвет квадратиков под иконки
+
+.footerBottom {
+background-color: $color-bottom-bg;
+
+padding: 20px 0 20px;
+border-top: 1px solid $color-border;
+
+
+
+.bottomContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.copyright {
+    color: $color-text-muted;
+    font-size: 14px;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+
+    .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: $color-social-bg;
+    border-radius: 6px; // Легкое скругление углов иконок, как на макете
+    color: $color-text-main;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        background-color: $color-text-main;
+        color: $color-bg; // Инверсия цветов при наведении
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+}
+}
